@@ -72,4 +72,12 @@ app.post('/fabiao', (req, res) => {
 ## 提交到 Github 仓库
 
 1. 在 github 创建一个远程仓库
-2. 
+2. git remote add origin 仓库地址
+3. git push origin master
+
+## 开发
+
+```shell
+npm install
+node app.js
+```

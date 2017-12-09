@@ -10,6 +10,7 @@ const app = express()
 app.use('/node_modules/', express.static('./node_modules/'))
 
 // 配置使用 art-template 模板引擎
+// res.render() 默认会去 views 目录查找指定的文件
 app.engine('html', expressArtTemplate)
 
 

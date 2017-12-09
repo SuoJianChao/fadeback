@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>留言本</title>
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+  <style>
+    .main {
+
+    }
+
+    .main .head {
+      margin-bottom: 25px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page-header container">
+    <h1><a href="index.html">留言本</a> <small>首页</small></h1>
+  </div>
+  <div class="main container">
+    <div class="head">
+      <a class="btn btn-success" href="/fabiao">发表留言</a>
+    </div>
+    <ul class="list-group">
+      <% for (let i = comments.length - 1; i >= 0; i--) { %>
+        <li class="list-group-item">
+          <span><%= comments[i].name %></span>说：
+          <span><%= comments[i].content %></span>
+          <span class="badge">14</span>
+        </li>
+      <% } %>
+    </ul>
+  </div>
+</body>
+
+</html>
